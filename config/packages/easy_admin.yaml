@@ -1,0 +1,20 @@
+easy_admin:
+    entities:
+        Menu:
+            class: App\Entity\Menu
+            list:
+                fields: ['id', 'name']
+            form:
+                fields: ['name', 'submenus']
+        Submenu:
+            class: App\Entity\Submenu
+            list:
+                fields: ['id', 'name', 'parent', 'menu']
+            form:
+                fields: ['name', 'parent', 'menu', 'menuContents', 'children']
+        MenuContent:
+            class: App\Entity\MenuContent
+            list:
+                fields: ['id', 'title', 'submenu']
+            form:
+                fields: ['title', 'content', 'submenu']

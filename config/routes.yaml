@@ -1,0 +1,19 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+# config/routes.yaml
+dashboard:
+    path: /admin
+    controller: App\Controller\Admin\DashboardController::index
+easy_admin_bundle:
+    resource: '@EasyAdminBundle/Controller/'
+    type: annotation
+
+admin:
+    path: /admin
+    controller: App\Controller\Admin\DashboardController::index
+
+get_menus:
+    path: /api/menus
+    controller: App\Controller\MenuController::getMenus
+    methods: GET
