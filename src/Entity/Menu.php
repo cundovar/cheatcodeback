@@ -36,11 +36,7 @@ class Menu
      */
     private $submenus;
 
-    public function __construct()
-    {
-        $this->submenus = new ArrayCollection();
-    }
-
+  
     public function getId(): ?int
     {
         return $this->id;
@@ -57,7 +53,10 @@ class Menu
 
         return $this;
     }
-
+    public function __construct()
+    {
+        $this->submenus = new ArrayCollection();
+    }
     /**
      * @return Collection<int, Submenu>
      */
@@ -91,5 +90,6 @@ class Menu
     {
         return $this->name; // Assurez-vous que $this->name n'est pas null
     }
+
     
 }

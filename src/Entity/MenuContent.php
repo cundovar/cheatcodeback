@@ -59,6 +59,12 @@ class MenuContent
      */
     private $content1;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"menucontent:read", "submenu:read"})
+     */
+    private $image;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -132,6 +138,18 @@ class MenuContent
     public function setContent1(?string $content1): self
     {
         $this->content1 = $content1;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }
